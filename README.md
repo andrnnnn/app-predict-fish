@@ -5,7 +5,7 @@ Aplikasi ini menggunakan model Random Forest Classifier untuk memprediksi jenis 
 ## Fitur
 
 - Prediksi jenis ikan berdasarkan input panjang dan berat.
-- Visualisasi matriks kebingungan dan pentingnya fitur.
+- Visualisasi confusion matrix dan imporatance feature.
 - Informasi model yang digunakan.
 - Gambar spesies ikan yang diprediksi.
 
