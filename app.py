@@ -33,15 +33,15 @@ def get_user_input():
     with col1:
         length = st.number_input(
             "Panjang Ikan (cm)", 
-            min_value=0.0, 
-            max_value=100.0, 
+            min_value=6.36, 
+            max_value=33.86, 
             value=10.0
         )
     with col2:
         weight = st.number_input(
             "Berat Ikan (kg)", 
-            min_value=0.0, 
-            max_value=50.0, 
+            min_value=2.05, 
+            max_value=6.29, 
             value=3.0
         )
     return length, weight
@@ -61,7 +61,7 @@ def show_prediction(species):
     st.success(f"Ikan ini diprediksi sebagai spesies: **{species}**")
     fish_image = get_fish_image(species)
     if fish_image:
-        st.image(fish_image, caption=f"Gambar Ikan {species}", use_container_width=True)
+        st.image(fish_image, caption=f"Gambar Ikan {species}")
     else:
         st.warning("Maaf, gambar untuk spesies ini tidak tersedia")
 
@@ -70,9 +70,9 @@ def show_model_info():
     with st.expander("ℹ️ Informasi Model"):
         st.write("""
         Model ini menggunakan Random Forest Classifier untuk memprediksi jenis ikan berdasarkan:
-        - Panjang ikan (cm)
-        - Berat ikan (kg)
-        - Rasio berat/panjang
+        - Panjang ikan (cm)     [6.36 - 33.86]
+        - Berat ikan (kg)       [2.05 - 6.29]
+        - Rasio berat/panjang   [0.08 - 0.64]
         """)
 
 # Footer
